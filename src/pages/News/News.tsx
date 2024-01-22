@@ -1,9 +1,9 @@
-function About() {
+function News() {
   return (
     <div style={{ marginTop: 150 }}>
-      <h1>About page</h1>
+      <h1>News</h1>
     </div>
   );
 }
 
-export default About;
+export default News;

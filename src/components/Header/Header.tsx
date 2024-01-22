@@ -1,15 +1,20 @@
-import { Link } from 'react-router-dom';
+// * Base
+import HeaderNavigation from '../Header-navigation/Header-navigation';
+import Logo from '../Logo/Logo';
+
+// * Styles
+import styles from './Header.module.css';
 
 function Header() {
   return (
-    <header>
-      <span>Logo</span>
-      <nav style={{ display: 'flex', gap: 20 }}>
-        <Link to='/'>Home</Link>
-        <Link to='/about'>About</Link>
-        <Link to='/about/detail'>About detail</Link>
-        <Link to='/about/info'>About info</Link>
-      </nav>
+    <header className={styles.header}>
+      <div className={styles.wrapper}>
+        <HeaderNavigation />
+        <Logo />
+        <button type="button" className={styles.login} title="Log in">
+          <span>Sign in</span>
+        </button>
+      </div>
     </header>
   );
 }

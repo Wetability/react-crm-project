@@ -7,8 +7,8 @@ import { Suspense, lazy } from 'react';
 import Loading from './components/Loading/Loading';
 
 const Home = lazy(() => import('./pages/Home/Home'));
-const Detail = lazy(() => import('./pages/About/pages/Detail/Detail'));
-const Info = lazy(() => import('./pages/About/pages/Info/Info'));
+const Menu = lazy(() => import('./pages/Menu/Menu'));
+const News = lazy(() => import('./pages/News/News'));
 const About = lazy(() => import('./pages/About/About'));
 
 // * Element
@@ -29,16 +29,17 @@ export default createBrowserRouter([
       {
         path: '/about',
         element: <Element component={<About />} />,
-        children: [
-          {
-            path: 'detail',
-            element: <Element component={<Detail />} />,
-          },
-          {
-            path: 'info',
-            element: <Element component={<Info />} />,
-          },
-        ],
+        children: [],
+      },
+      {
+        path: '/menu',
+        element: <Element component={<Menu />} />,
+        children: [],
+      },
+      {
+        path: '/news',
+        element: <Element component={<News />} />,
+        children: [],
       },
     ],
   },

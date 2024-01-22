@@ -1,0 +1,36 @@
+.header {
+  height: 120px;
+  background-color: var(--c-black-dark);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  border: 1px solid var(--c-grey-semi-light);
+}
+.wrapper {
+  max-width: 1230px;
+  height: 120px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login {
+  padding: 0 40px;
+  height: 40px;
+  border: 1px solid var(--c-gold-dark);
+  border-radius: 10px;
+  color: var(--c-white);
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: background-color var(--t-normal);
+
+  &:hover {
+    background-color: var(--c-gold-dark);
+  }
+}
