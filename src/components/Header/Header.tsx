@@ -1,6 +1,7 @@
 // * Base
 import HeaderNavigation from '../Header-navigation/Header-navigation';
 import Logo from '../Logo/Logo';
+import { Link } from 'react-router-dom';
 
 // * Styles
 import styles from './Header.module.css';
@@ -11,9 +12,9 @@ function Header() {
       <div className={styles.wrapper}>
         <HeaderNavigation />
         <Logo />
-        <button type="button" className={styles.login} title="Log in">
+        <Link to="/registration" className={styles.login} title="Log in">
           <span>Sign in</span>
-        </button>
+        </Link>
       </div>
     </header>
   );

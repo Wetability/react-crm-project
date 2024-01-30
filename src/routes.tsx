@@ -10,6 +10,7 @@ const Home = lazy(() => import('./pages/Home/Home'));
 const Menu = lazy(() => import('./pages/Menu/Menu'));
 const News = lazy(() => import('./pages/News/News'));
 const About = lazy(() => import('./pages/About/About'));
+const Registration = lazy(() => import('./pages/Registration/Registration'));
 
 // * Element
 function Element({ component }: { component: JSX.Element }) {
@@ -39,6 +40,11 @@ export default createBrowserRouter([
       {
         path: '/news',
         element: <Element component={<News />} />,
+        children: [],
+      },
+      {
+        path: '/registration',
+        element: <Element component={<Registration />} />,
         children: [],
       },
     ],

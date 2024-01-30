@@ -29,6 +29,9 @@
   letter-spacing: 1.5px;
   text-transform: uppercase;
   transition: background-color var(--t-normal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &:hover {
     background-color: var(--c-gold-dark);
