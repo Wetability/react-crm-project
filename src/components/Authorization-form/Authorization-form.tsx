@@ -20,11 +20,15 @@ function AuthorizationForm() {
     { setSubmitting, resetForm, setErrors }: any
   ) => {
     axios
-      .post('http://localhost:3000/users/authorization', values, {
-        headers: {
-          Authorization: localStorage.getItem('token') || '',
-        },
-      })
+      .post(
+        'https://react-crm-project-kzl8.onrender.com/users/authorization',
+        values,
+        {
+          headers: {
+            Authorization: localStorage.getItem('token') || '',
+          },
+        }
+      )
       .then(({ data }) => {
         localStorage.setItem('token', data.token);
         resetForm(initialValues);
@@ -32,7 +36,7 @@ function AuthorizationForm() {
       })
       .catch(({ response }) => {
         if (response.status === 500) {
-          return alert('Проблеми з реєстрацією, спробуйте пізніше!');
+          return alert('Authorization issues, please try again later!');
         }
 
         setErrors(response.data);
