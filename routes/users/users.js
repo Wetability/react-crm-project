@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import { Router } from 'express';
 import { User, addUser, comparePass } from '../../models/user.js';
 import config from '../../config/db.js';

@@ -1,7 +1,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
   justify-content: center;
 }
 
@@ -35,18 +35,6 @@
   color: var(--c-red);
   font-size: 14px;
   height: 15px;
-}
-
-.gender {
-  display: flex;
-  background-color: var(--c-black);
-  border: 1px solid var(--c-grey-light);
-  border-radius: 4px;
-  color: var(--c-white);
-  padding-right: 30px;
-  padding-left: 10px;
-  width: fit-content;
-  height: 25px;
 }
 
 .submit {

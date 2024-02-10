@@ -1,5 +1,7 @@
-// * Styles
+// * Base
 import RegistrationForm from '../../components/Registration-form/Registration-form';
+
+// * Styles
 import styles from './Registration.module.css';
 
 function Registration() {

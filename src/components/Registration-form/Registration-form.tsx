@@ -1,7 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+// * Base
 import { Formik } from 'formik';
-import styles from './Registration-form.module.css';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+
+// * Styles
+import styles from './Registration-form.module.css';
 
 const EMAIL_REG_EXP = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
 
@@ -15,6 +19,8 @@ const initialValues = {
 };
 
 function RegistrationForm() {
+  const navigate = useNavigate();
+
   const validation = (values: any) => {
     const errors: any = {};
 
@@ -60,6 +66,7 @@ function RegistrationForm() {
       .post('http://localhost:3000/users/registration', values)
       .then(() => {
         resetForm(initialValues);
+        navigate('/');
       })
       .catch(({ response }) => {
         if (response.status === 500) {

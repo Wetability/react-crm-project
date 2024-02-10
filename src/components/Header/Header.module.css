@@ -18,7 +18,33 @@
   align-items: center;
 }
 
-.login {
+.group {
+  display: flex;
+  gap: 30px;
+}
+
+.registration {
+  padding: 0 40px;
+  height: 40px;
+  border: 1px solid var(--c-gold-dark);
+  background-color: var(--c-gold-dark);
+  border-radius: 10px;
+  color: var(--c-white);
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: background-color var(--t-normal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background-color: var(--c-black);
+  }
+}
+
+.authorization {
   padding: 0 40px;
   height: 40px;
   border: 1px solid var(--c-gold-dark);

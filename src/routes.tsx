@@ -11,6 +11,7 @@ const Menu = lazy(() => import('./pages/Menu/Menu'));
 const News = lazy(() => import('./pages/News/News'));
 const About = lazy(() => import('./pages/About/About'));
 const Registration = lazy(() => import('./pages/Registration/Registration'));
+const Authorization = lazy(() => import('./pages/Authorization/Authorization'));
 
 // * Element
 function Element({ component }: { component: JSX.Element }) {
@@ -45,6 +46,11 @@ export default createBrowserRouter([
       {
         path: '/registration',
         element: <Element component={<Registration />} />,
+        children: [],
+      },
+      {
+        path: '/authorization',
+        element: <Element component={<Authorization />} />,
         children: [],
       },
     ],
