@@ -1,14 +1,18 @@
 // * Base
 import RegistrationForm from '../../components/Registration-form/Registration-form';
+import Header from '../../components/Header/Header';
 
 // * Styles
 import styles from './Registration.module.css';
 
 function Registration() {
   return (
-    <div className={styles.wrapper}>
-      <RegistrationForm />
-    </div>
+    <>
+      <Header />
+      <div className={styles.wrapper}>
+        <RegistrationForm />
+      </div>
+    </>
   );
 }
 

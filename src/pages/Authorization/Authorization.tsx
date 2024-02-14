@@ -1,14 +1,18 @@
 // * Base
 import AuthorizationForm from '../../components/Authorization-form/Authorization-form';
+import Header from '../../components/Header/Header';
 
 // * Styles
 import styles from './Authorization.module.css';
 
 function Authorization() {
   return (
-    <div className={styles.wrapper}>
-      <AuthorizationForm />
-    </div>
+    <>
+      <Header />
+      <div className={styles.wrapper}>
+        <AuthorizationForm />
+      </div>
+    </>
   );
 }
 

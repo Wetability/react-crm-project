@@ -63,10 +63,7 @@ function RegistrationForm() {
     { setSubmitting, resetForm, setErrors }: any
   ) => {
     axios
-      .post(
-        'https://react-crm-project-kzl8.onrender.com/users/registration',
-        values
-      )
+      .post('http://localhost:3000/users/registration', values)
       .then(() => {
         resetForm(initialValues);
         navigate('/');

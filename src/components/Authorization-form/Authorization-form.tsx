@@ -20,15 +20,11 @@ function AuthorizationForm() {
     { setSubmitting, resetForm, setErrors }: any
   ) => {
     axios
-      .post(
-        'https://react-crm-project-kzl8.onrender.com/users/authorization',
-        values,
-        {
-          headers: {
-            Authorization: localStorage.getItem('token') || '',
-          },
-        }
-      )
+      .post('http://localhost:3000/users/authorization', values, {
+        headers: {
+          Authorization: localStorage.getItem('token') || '',
+        },
+      })
       .then(({ data }) => {
         localStorage.setItem('token', data.token);
         resetForm(initialValues);

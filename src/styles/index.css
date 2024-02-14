@@ -9,10 +9,14 @@
   --c-gold: #f8dabf;
   --c-gold-dark: #c7a17a;
   --c-white: #fff;
+  --c-white-light: #dfdfdf;
   --c-red: #c21616;
 
   /* Transition */
   --t-normal: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Fonts */
+  --f-jost: 'Jost', sans-serif;
 }
 
 *,
