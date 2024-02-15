@@ -3,7 +3,7 @@ import styles from './Intro.module.css';
 
 function Intro() {
   return (
-    <div className={styles.intro}>
+    <section className={styles.intro}>
       <div className={styles.wrapper}>
         <div className={styles.group}>
           <h1 className={styles.title}>Roasted coffee best choice</h1>
@@ -23,7 +23,7 @@ function Intro() {
           </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
