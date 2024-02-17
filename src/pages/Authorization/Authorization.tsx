@@ -1,5 +1,6 @@
 // * Base
 import AuthorizationForm from '../../components/Authorization-form/Authorization-form';
+import Footer from '../../components/Footer/Footer';
 import Header from '../../components/Header/Header';
 
 // * Styles
@@ -12,6 +13,7 @@ function Authorization() {
       <div className={styles.wrapper}>
         <AuthorizationForm />
       </div>
+      <Footer />
     </>
   );
 }
