@@ -4,13 +4,14 @@ import list from './Footer.data';
 
 // * Styles
 import styles from './Footer.module.css';
+import Logo from '../Logo/Logo';
 
 function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.wrapper}>
         <div className={styles.logo}>
-          <img src="./Logo.png" alt="Logo" className={styles.image} />
+          <Logo />
           <span className={styles.title}>CoffeMeet</span>
         </div>
         <nav className={styles.list}>
