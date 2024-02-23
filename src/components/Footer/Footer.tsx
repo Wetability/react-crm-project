@@ -1,6 +1,6 @@
 // * Base
 import { Link } from 'react-router-dom';
-import list from './Footer.data';
+import list from '../../data/navigation.data';
 
 // * Styles
 import styles from './Footer.module.css';

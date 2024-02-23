@@ -6,10 +6,10 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 
 // * Base
-import news from './Latest-news.data';
+import news from '../../data/news.data';
 
 // * Styles
-import styles from './Latest-news.module.css';
+import styles from './LatestNews.module.css';
 
 function LatestNews() {
   return (

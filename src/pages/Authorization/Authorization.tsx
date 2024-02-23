@@ -1,5 +1,5 @@
 // * Base
-import AuthorizationForm from '../../components/Authorization-form/Authorization-form';
+import AuthorizationForm from '../../components/AuthorizationForm/AuthorizationForm';
 import Footer from '../../components/Footer/Footer';
 import Header from '../../components/Header/Header';
 

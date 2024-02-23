@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 // * Styles
-import styles from './Authorization-form.module.css';
+import styles from './AuthorizationForm.module.css';
 
 const initialValues = {
   password: '',

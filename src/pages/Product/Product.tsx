@@ -1,17 +1,16 @@
 import Footer from '../../components/Footer/Footer';
-import MenuCatalog from '../../components/MenuCatalog/MenuCatalog';
 import Header from '../../components/Header/Header';
 
-function Menu() {
+function ProductDetail() {
   return (
     <>
       <Header />
       <main>
-        <MenuCatalog />
+        <h1 style={{ marginTop: '200px' }}>Hello</h1>
       </main>
       <Footer />
     </>
   );
 }
 
-export default Menu;
+export default ProductDetail;

@@ -1,5 +1,5 @@
 // * Base
-import RegistrationForm from '../../components/Registration-form/Registration-form';
+import RegistrationForm from '../../components/RegistrationForm/RegistrationForm';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 
@@ -10,9 +10,11 @@ function Registration() {
   return (
     <>
       <Header />
-      <div className={styles.wrapper}>
-        <RegistrationForm />
-      </div>
+      <main>
+        <div className={styles.wrapper}>
+          <RegistrationForm />
+        </div>
+      </main>
       <Footer />
     </>
   );

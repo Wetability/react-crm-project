@@ -6,7 +6,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 
 // * Base
-import products from './Catalog.data';
+import products from '../../data/products.data';
+import { Link } from 'react-router-dom';
 
 // * Styles
 import styles from './Catalog.module.css';
@@ -18,7 +19,7 @@ function Catalog() {
         <h2 className={styles.mainTitle}>Catalog</h2>
         <Swiper
           modules={[A11y, Autoplay]}
-          spaceBetween={25}
+          spaceBetween={20}
           slidesPerView={3}
           autoplay={{ delay: 5000 }}
           loop={true}
@@ -27,7 +28,10 @@ function Catalog() {
           {products.map((item, index) => {
             return (
               <SwiperSlide key={item.id || index} className={styles.slide}>
-                <div className={styles.card}>
+                <Link
+                  className={styles.card}
+                  to={`menu/${encodeURIComponent(item.title)}`}
+                >
                   {item.path && (
                     <div className={styles.img}>
                       <img
@@ -52,7 +56,7 @@ function Catalog() {
                       <span className={styles.price}>{`$${item.price}`}</span>
                     </div>
                   )}
-                </div>
+                </Link>
               </SwiperSlide>
             );
           })}

@@ -1,9 +1,9 @@
 // * Base
 import { Link } from 'react-router-dom';
-import list from './Header-navigation.data';
+import list from '../../data/navigation.data';
 
 // * Style
-import styles from './Header-navigation.module.css';
+import styles from './HeaderNavigation.module.css';
 
 function HeaderNavigation() {
   return (

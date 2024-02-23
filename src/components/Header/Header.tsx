@@ -1,6 +1,6 @@
 // * Base
 import { useEffect, useState } from 'react';
-import HeaderNavigation from '../Header-navigation/Header-navigation';
+import HeaderNavigation from '../HeaderNavigation/HeaderNavigation';
 import Logo from '../Logo/Logo';
 import { Link } from 'react-router-dom';
 
