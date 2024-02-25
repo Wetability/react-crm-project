@@ -1,0 +1,231 @@
+.wrapper {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainTitle {
+  font-family: var(--f-jost);
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 144%;
+  text-transform: uppercase;
+  color: var(--c-white);
+  margin-top: 100px;
+  margin-bottom: 55px;
+}
+
+.group {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 80px;
+}
+
+.imageCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 65%;
+  height: 520px;
+  background-color: var(--c-black-light);
+  border-radius: 10px;
+}
+
+.image {
+  display: flex;
+  flex: 0 0 25%;
+  height: 400px;
+}
+
+.priceCard {
+  height: 250px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  flex: 0 0 33.333333%;
+  background-color: var(--c-black-light);
+}
+
+.prices {
+  display: flex;
+  gap: 30px;
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.price {
+  align-self: flex-start;
+  font-family: var(--f-jost);
+  font-weight: 400;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: var(--c-white);
+}
+
+.discount {
+  font-family: var(--f-jost);
+  font-weight: 400;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-decoration: line-through;
+  color: var(--c-grey-discount);
+}
+
+.counterContainer {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.button {
+  font-family: var(--f-jost);
+  font-weight: 400;
+  font-size: 22px;
+  color: var(--c-white);
+  height: 40px;
+  border: 1px solid var(--c-gold);
+  border-radius: 5px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color var(--t-normal);
+}
+
+.button:hover {
+  background-color: var(--c-gold);
+  color: var(--c-black-light);
+}
+
+.count {
+  font-family: var(--f-jost);
+  font-weight: 400;
+  font-size: 22px;
+  color: var(--c-white);
+}
+
+.buy {
+  height: 50px;
+  padding: 0 115px;
+  border: 1px solid var(--c-gold-dark);
+  border-radius: 10px;
+  background-color: var(--c-gold-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  font-weight: 500;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: var(--c-white);
+  transition: background-color var(--t-normal);
+  font-family: var(--f-jost);
+
+  &:hover {
+    background-color: var(--c-black-light);
+    color: var(--c-white);
+  }
+}
+
+.subTitle {
+  font-family: var(--f-jost);
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 144%;
+  text-transform: uppercase;
+  color: var(--c-white);
+  margin-bottom: 35px;
+}
+
+.descriptionCard {
+  background-color: var(--c-black-light);
+  padding: 30px;
+  margin-bottom: 80px;
+  border-radius: 10px;
+}
+
+.description {
+  font-family: var(--f-jost);
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--c-white-light);
+}
+
+.otherProducts {
+  font-family: var(--f-jost);
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 144%;
+  text-transform: uppercase;
+  color: var(--c-white);
+  margin-bottom: 40px;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 80px;
+}
+
+.slide {
+  display: flex !important;
+  justify-content: center;
+}
+
+.card {
+  width: 400px;
+  height: 375px;
+  background-color: var(--c-black-light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  transition: background-color var(--t-normal);
+
+  &:hover {
+    background-color: var(--c-grey);
+  }
+}
+
+.cardGroup {
+  display: flex;
+  align-self: flex-start;
+  gap: 30px;
+  margin-left: 10px;
+  margin-top: 30px;
+}
+
+.productTitle {
+  align-self: flex-start;
+  font-family: var(--f-jost);
+  font-weight: 900;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: var(--c-white);
+  margin-top: 45px;
+  margin-left: 10px;
+}
+
+.cardImg {
+  display: flex;
+  margin-top: 20px;
+}
+
+.cardImage {
+  flex: 0 0 25%;
+  height: 200px;
+}
+
+.cardPrice {
+  align-self: flex-start;
+  font-family: var(--f-jost);
+  font-weight: 400;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: var(--c-white);
+}

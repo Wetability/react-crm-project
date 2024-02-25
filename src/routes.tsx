@@ -8,7 +8,6 @@ import Loading from './components/Loading/Loading';
 
 const Home = lazy(() => import('./pages/Home/Home'));
 const Menu = lazy(() => import('./pages/Menu/Menu'));
-const News = lazy(() => import('./pages/News/News'));
 const About = lazy(() => import('./pages/About/About'));
 const Registration = lazy(() => import('./pages/Registration/Registration'));
 const Authorization = lazy(() => import('./pages/Authorization/Authorization'));
@@ -40,11 +39,6 @@ export default createBrowserRouter([
         children: [],
       },
       {
-        path: '/news',
-        element: <Element component={<News />} />,
-        children: [],
-      },
-      {
         path: '/registration',
         element: <Element component={<Registration />} />,
         children: [],
@@ -55,7 +49,7 @@ export default createBrowserRouter([
         children: [],
       },
       {
-        path: '/menu/:productName',
+        path: '/menu/:productId',
         element: <Element component={<Product />} />,
         children: [],
       },

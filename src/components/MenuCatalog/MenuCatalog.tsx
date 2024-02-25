@@ -16,7 +16,7 @@ function MenuCatalog() {
               <Link
                 className={styles.card}
                 key={item.id || index}
-                to={`${encodeURIComponent(item.title)}`}
+                to={`/menu/${item.id}`}
               >
                 {item.path && (
                   <div className={styles.img}>
@@ -28,12 +28,12 @@ function MenuCatalog() {
                   </div>
                 )}
                 <h3 className={styles.title}>{item.title}</h3>
-                {item.discount ? (
+                {item.oldPrice ? (
                   <div className={styles.group}>
-                    <span className={styles.discount}>{`$${item.price}`}</span>
+                    <span className={styles.price}>{`$${item.price}`}</span>
                     <span
-                      className={styles.discountedPrice}
-                    >{`$${item.discount}`}</span>
+                      className={styles.discount}
+                    >{`$${item.oldPrice}`}</span>
                   </div>
                 ) : (
                   <div className={styles.group}>

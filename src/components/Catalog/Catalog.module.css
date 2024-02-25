@@ -53,6 +53,7 @@
 
 .image {
   flex: 0 0 25%;
+  height: 200px;
 }
 
 .title {
@@ -84,14 +85,6 @@
 }
 
 .discount {
-  font-family: var(--f-jost);
-  font-weight: 400;
-  font-size: 18px;
-  text-transform: uppercase;
-  color: var(--c-white);
-}
-
-.discountedPrice {
   font-family: var(--f-jost);
   font-weight: 400;
   font-size: 18px;

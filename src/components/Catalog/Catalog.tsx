@@ -28,10 +28,7 @@ function Catalog() {
           {products.map((item, index) => {
             return (
               <SwiperSlide key={item.id || index} className={styles.slide}>
-                <Link
-                  className={styles.card}
-                  to={`menu/${encodeURIComponent(item.title)}`}
-                >
+                <Link className={styles.card} to={`/menu/${item.id}`}>
                   {item.path && (
                     <div className={styles.img}>
                       <img
@@ -42,14 +39,12 @@ function Catalog() {
                     </div>
                   )}
                   <h3 className={styles.title}>{item.title}</h3>
-                  {item.discount ? (
+                  {item.oldPrice ? (
                     <div className={styles.group}>
+                      <span className={styles.price}>{`$${item.price}`}</span>
                       <span
                         className={styles.discount}
-                      >{`$${item.price}`}</span>
-                      <span
-                        className={styles.discountedPrice}
-                      >{`$${item.discount}`}</span>
+                      >{`$${item.oldPrice}`}</span>
                     </div>
                   ) : (
                     <div className={styles.group}>
