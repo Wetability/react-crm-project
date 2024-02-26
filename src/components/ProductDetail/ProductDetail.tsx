@@ -32,12 +32,16 @@ function ProductDetail() {
     .slice(0, 5);
 
   if (!product) {
-    return <h2 className={styles.title}>Product not found</h2>;
+    return (
+      <h2 className={styles.mainTitle} style={{ marginTop: '130px' }}>
+        Product not found
+      </h2>
+    );
   }
 
-  const increment = () => setCount(count + 1);
+  const increment = () => setCount((prevCount) => prevCount + 1);
   const decrement = () => {
-    if (count > 1) setCount(count - 1);
+    if (count > 1) setCount((prevCount) => prevCount - 1);
   };
 
   return (
