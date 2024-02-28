@@ -7,29 +7,22 @@ import 'swiper/css';
 
 // * Base
 import { Link, useParams } from 'react-router-dom';
-import products from '../../data/products.data';
+import PRODUCTS from '../../data/products.data';
 
 // * Styles
 import styles from './ProductDetail.module.css';
-import { useState } from 'react';
+import { memo, useState } from 'react';
 
-interface Product {
-  id: number;
-  path: string;
-  title: string;
-  price: number;
-  oldPrice?: number;
-}
-
-function ProductDetail() {
-  const { productId } = useParams();
+const ProductDetail = memo(() => {
+  const { Id } = useParams();
   const [count, setCount] = useState(1);
 
-  const product = products.find((item) => item.id === Number(productId));
+  const product = PRODUCTS.find((item) => item.id === Number(Id));
 
-  const otherProducts: Product[] = products
-    .filter((item) => item.id !== Number(productId))
-    .slice(0, 5);
+  const otherProducts = PRODUCTS.filter((item) => item.id !== Number(Id)).slice(
+    0,
+    5
+  );
 
   if (!product) {
     return (
@@ -151,6 +144,6 @@ function ProductDetail() {
       </div>
     </section>
   );
-}
+});
 
 export default ProductDetail;

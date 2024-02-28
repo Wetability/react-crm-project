@@ -25,36 +25,34 @@ function Catalog() {
           loop={true}
           className={styles.swiper}
         >
-          {products.map((item, index) => {
-            return (
-              <SwiperSlide key={item.id || index} className={styles.slide}>
-                <Link className={styles.card} to={`/menu/${item.id}`}>
-                  {item.path && (
-                    <div className={styles.img}>
-                      <img
-                        src={item.path}
-                        alt={item.title}
-                        className={styles.image}
-                      />
-                    </div>
-                  )}
-                  <h3 className={styles.title}>{item.title}</h3>
-                  {item.oldPrice ? (
-                    <div className={styles.group}>
-                      <span className={styles.price}>{`$${item.price}`}</span>
-                      <span
-                        className={styles.discount}
-                      >{`$${item.oldPrice}`}</span>
-                    </div>
-                  ) : (
-                    <div className={styles.group}>
-                      <span className={styles.price}>{`$${item.price}`}</span>
-                    </div>
-                  )}
-                </Link>
-              </SwiperSlide>
-            );
-          })}
+          {products.map((item, index) => (
+            <SwiperSlide key={item.id || index} className={styles.slide}>
+              <Link className={styles.card} to={`/menu/${item.id}`}>
+                {item.path && (
+                  <div className={styles.img}>
+                    <img
+                      src={item.path}
+                      alt={item.title}
+                      className={styles.image}
+                    />
+                  </div>
+                )}
+                <h3 className={styles.title}>{item.title}</h3>
+                {item.oldPrice ? (
+                  <div className={styles.group}>
+                    <span className={styles.price}>{`$${item.price}`}</span>
+                    <span
+                      className={styles.discount}
+                    >{`$${item.oldPrice}`}</span>
+                  </div>
+                ) : (
+                  <div className={styles.group}>
+                    <span className={styles.price}>{`$${item.price}`}</span>
+                  </div>
+                )}
+              </Link>
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
     </section>

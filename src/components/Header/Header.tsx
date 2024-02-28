@@ -1,19 +1,20 @@
 // * Base
 import { useEffect, useState } from 'react';
-import HeaderNavigation from '../HeaderNavigation/HeaderNavigation';
+import NavigationItems from '../NavigationItems/NavigationItems';
 import Logo from '../Logo/Logo';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 // * Styles
 import styles from './Header.module.css';
 
 function Header() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const token = localStorage.getItem('token');
     setIsLoggedIn(!!token);
-  }, []);
+  }, [location]);
 
   const handleLogout = () => {
     localStorage.removeItem('token');
@@ -23,7 +24,9 @@ function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.wrapper}>
-        <HeaderNavigation />
+        <nav className={styles.list}>
+          <NavigationItems />
+        </nav>
         <Logo />
         {isLoggedIn ? (
           <div className={styles.group}>

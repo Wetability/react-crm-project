@@ -1,4 +1,4 @@
-const products = [
+const PRODUCTS = [
   {
     id: 1,
     path: '../public/product1.png',
@@ -11,12 +11,14 @@ const products = [
     path: '../public/product2.png',
     title: 'lavazza coffee',
     price: 19.99,
+    oldPrice: null,
   },
   {
     id: 3,
     path: '../public/product1.png',
     title: 'lavazza coffee',
     price: 19.99,
+    oldPrice: null,
   },
   {
     id: 4,
@@ -30,6 +32,7 @@ const products = [
     path: '../public/product1.png',
     title: 'lavazza coffee',
     price: 19.99,
+    oldPrice: null,
   },
   {
     id: 6,
@@ -38,6 +41,6 @@ const products = [
     price: 19.99,
     oldPrice: 29.99,
   },
-];
+] as const;
 
-export default products;
+export default PRODUCTS;

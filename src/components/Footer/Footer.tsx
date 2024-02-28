@@ -1,12 +1,12 @@
 // * Base
-import { Link } from 'react-router-dom';
-import list from '../../data/navigation.data';
+import Logo from '../Logo/Logo';
+import { memo } from 'react';
+import NavigationItems from '../NavigationItems/NavigationItems';
 
 // * Styles
 import styles from './Footer.module.css';
-import Logo from '../Logo/Logo';
 
-function Footer() {
+const Footer = memo(() => {
   return (
     <footer className={styles.footer}>
       <div className={styles.wrapper}>
@@ -15,22 +15,11 @@ function Footer() {
           <span className={styles.title}>CoffeMeet</span>
         </div>
         <nav className={styles.list}>
-          {list.map((item, index) => {
-            return (
-              <Link
-                key={'list item - ' + item + index}
-                to={item.link}
-                className={styles.item}
-                title={item.hover}
-              >
-                {item.title}
-              </Link>
-            );
-          })}
+          <NavigationItems />
         </nav>
       </div>
     </footer>
   );
-}
+});
 
 export default Footer;

@@ -1,4 +1,3 @@
-/* eslint-disable react-refresh/only-export-components */
 import { createBrowserRouter } from 'react-router-dom';
 
 // * Components
@@ -18,7 +17,7 @@ function Element({ component }: { component: JSX.Element }) {
   return <Suspense fallback={<Loading />}>{component}</Suspense>;
 }
 
-export default createBrowserRouter([
+const routes = createBrowserRouter([
   {
     path: '/',
     element: <App />,
@@ -49,10 +48,12 @@ export default createBrowserRouter([
         children: [],
       },
       {
-        path: '/menu/:productId',
+        path: '/menu/:Id',
         element: <Element component={<Product />} />,
         children: [],
       },
     ],
   },
 ]);
+
+export default routes;

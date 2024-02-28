@@ -1,6 +1,6 @@
 // * Base
 import { Link } from 'react-router-dom';
-import products from '../../data/products.data';
+import PRODUCTS from '../../data/products.data';
 
 // * Styles
 import styles from './MenuCatalog.module.css';
@@ -11,7 +11,7 @@ function MenuCatalog() {
       <div className={styles.wrapper}>
         <h2 className={styles.mainTitle}>Menu</h2>
         <div className={styles.container}>
-          {products.map((item, index) => {
+          {PRODUCTS.map((item, index) => {
             return (
               <Link
                 className={styles.card}

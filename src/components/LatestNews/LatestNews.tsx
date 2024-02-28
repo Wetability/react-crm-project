@@ -24,17 +24,15 @@ function LatestNews() {
           loop={true}
           className={styles.swiper}
         >
-          {news.map((item, index) => {
-            return (
-              <SwiperSlide key={item.id || index} className={styles.slide}>
-                <div className={styles.card}>
-                  <img src={item.path} alt={item.title} />
-                  <h3 className={styles.title}>{item.title}</h3>
-                  <p className={styles.description}>{item.description}</p>
-                </div>
-              </SwiperSlide>
-            );
-          })}
+          {news.map((item, index) => (
+            <SwiperSlide key={item.id || index} className={styles.slide}>
+              <div className={styles.card}>
+                <img src={item.path} alt={item.title} />
+                <h3 className={styles.title}>{item.title}</h3>
+                <p className={styles.description}>{item.description}</p>
+              </div>
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
     </section>
